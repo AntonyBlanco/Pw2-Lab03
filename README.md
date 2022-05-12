@@ -31,13 +31,13 @@
         <td>ASIGNATURA:</td><td colspan="5">Laboratorio de Programación Web 2</td>
     </tr>
     <tr>
-        <td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Git - GitHub</td>
+        <td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Ajax y NodeJS</td>
     </tr>
     <tr>
-        <td>NÚMERO DE PRÁCTICA:</td><td>01</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+        <td>NÚMERO DE PRÁCTICA:</td><td>03</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
     </tr>
     <tr>
-        <td colspan="2">FECHA DE PRESENTACIÓN:</td><td>29-Abr-2022</td><td colspan="2">HORA DE PRESENTACIÓN:</td><td>16:00</td>
+        <td colspan="2">FECHA DE PRESENTACIÓN:</td><td>14-May-2022</td><td colspan="2">HORA DE PRESENTACIÓN:</td><td>20:00</td>
     </tr>
     <tr>
         <td colspan="3">INTEGRANTES:
@@ -69,33 +69,38 @@
     <tbody>
         <tr>
             <td>
-            I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS<br>
-            Repositorios personales<br>
+            I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS
             <ol>
-                <li>Blanco Trujillo, Antony Jacob<br>https://github.com/AntonyBlanco/pw2Lab</li>
-                <li>Cahuana Aguilar, Josué Mathías Miguel<br>https://github.com/josuecahuana/PW2-Josue_Cahuana.git</li>
-                <li>Hancco Velásquez, Jessica Geraldine<br>https://github.com/JessHV/PW2-Jessica_Hancco.git</li>
-                <li>Mayta Nolasco, Oliver Alessandro<br>https://github.com/oliver092377/pw2Lab1</li>
-                <li>Umasi Cariapaza, Carlos Daniel<br>https://github.com/cumasic/PW2</li>
+                <li>En grupos de 3 a 5 personas implemente una aplicación web que navegue sobre archivos Markdown y permita:</li>
+                <ul>
+                    <li>Listas los archivos Markdown disponibles</li>
+                    <li>Ver el contenido de un archivo Markdown traducido a HTML</li>
+                    <li>Crear nuevos archivos MarkDown y almacenarlos en el servidor</li>
+                </ul>
+                <li>La comunicación entre el cliente y el servidor tiene que ser usando JSON sólamente. El cliente debe usar AJAX para sus peticiones El servidor debe usar NodeJS Su aplicación debe ser de página única, es decir que sólo habrá un archivo index.html y nada más.</li>
+                <li>Si los enlaces proporcionado en esta guía no le son suficientes, puede revisar códigos en Internet que le ayuden con cosas como ejemplos: listar un directorio en NodeJS; pero deberá incluir los enlaces correspondientes en sus archivos como comentarios y sólo podrá usar código de stackoverflow, incluir código de cualquier otra fuente está prohibido y se considerará actitud deshonesta.</li>
             </ol>
-            Repositorio general<br>https://github.com/JessHV/PW2-Lab.git
             </td>
         </tr>
         <tr>
             <td>
             II. SOLUCIÓN DEL CUESTIONARIO<br>
-            <b>¿Por qué Git es una herramienta importante en el curso de Programación Web 2?</b><br>
-            El curso de Programación Web 2 incluirá trabajos en equipo e individuales, los cuales implican en cualquier sentido el uso de la programación.
-            Para el caso de uso de frameworks y/o tareas en equipo se trabajará con proyectos complejos en forma de plantilla, por lo cual se pueden cometer errores o se necesitarán realizar pruebas y eso se vuelve un trabajo que toma mucho tiempo, es por ello que requerimos de un sistema de control de versiones, como el caso de Git que es una herramienta importante porque nos permite trabajar en grupo de manera eficiente y progresiva, esto debido a que nos permite hacer “commits”, puntos de guardado que nos permitirán regresar a una versión en la cual no haya errores.
+            <ul>
+                <li><b>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?</b></li>
+                jnjnjn
+                <li><b>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</b></li>
+                <li><b>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</b></li>
+                <li><b>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</b></li>
+            </ul>
             </td>
         </tr>
         <tr>
             <td>
             III. CONCLUSIONES<br>
                 <ul>
-                    <li>Git es como la representación de cambios guardados como en una estructura de arbol pasando por las fases de modificación, preparación y confirmación de un cambio.</li>
-                    <li>GitHub facilita la tarea de mantener un sistema de control de versiones en repositorios con proyectos compartidos como tambien personales, ya que ofrece muchas opciones para desarrolladores.</li>
-                    <li>Existen diversos softwares editores de código que simplifican codificación, la cuestión es elegir la adecuada ya que se diferencian por los lenguajes de programación que manejan y otras características.</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </td>
         </tr>
