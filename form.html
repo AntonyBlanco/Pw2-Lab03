@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario to Markdown</title>
+    <!--
+    <script>
+        function mostrarMarkdown(){
+            const url = 'http://localhost:4000/FormMarkdown'
+            fetch(url).then(
+                response => response.json()
+            ).then(
+                data => {
+                    document.querySelector("").innerHTML = data.text
+                }
+            )
+        }
+    -->
+    </script>
 </head>
 <body>
-    <form action="">
-        <label>Título:</label><br>
-        <input type="text" name="titulo">
-        <br><br>
-        <label>Inserte Markout:</label><br>
-        <textarea style="width:200px; height:200px">Inserte texto en formato Markdown...</textarea>
-        <br><br>
-        <input type="submit" value="Enviar">
-
-    </form>
+    <div id="Formulario">
+        <form action="" method="post">
+            <!--
+            <label for="titulo">Título:</label><br>
+            <input type="text" id="titulo" name="titulo">
+            <br><br>
+            -->
+            <label for="textoM">Inserte texto:</label><br>
+            <textarea id="textoM" name="textoM" style="width:200px; height:200px"></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </body>
 </html>
