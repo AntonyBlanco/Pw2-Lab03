@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario to html</title>
+
+</head>
+
+<body>
+    <div id="xd">
+        <form action="" method="post">
+            <input type="submit" value="Mostrar">
+        </form>
+    </div>
+    <script>
+        function mostrarHtml() {
+            const url = 'http://localhost:4000/Mostrar'
+            fetch(url).then(
+                response => response.json()
+            ).then(
+                data => {
+                    document.getElementsByClassName("#mostrar").innerHTML = data.text
+                }
+            )
+        }
+    </script>
+</body>
+
+</html>
