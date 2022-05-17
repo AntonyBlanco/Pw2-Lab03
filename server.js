@@ -1,23 +1,21 @@
 const path = require('path');
 const express = require('express');
 const fs = require('fs')
-const bp = require('body-parser')
-//const MarkdownIt = require('markdown-it')
-//const md = new MarkdownIt();
+const bp = require('body-parser');
+const { response } = require('express');
+
+const MarkdownIt = require('markdown-it')
+const md = new MarkdownIt();
 
 const app = express();
 
-app.use(express.static('pub'));
+const publicDir = "pub";
 
+app.use(express.static('pub'));
 app.use(bp.json())
 app.use(bp.urlencoded({
     extended:true
 }))
-/*
-app.listen(3000, () => {
-    console.log("Escuchando en el puerto 3000");
-});
-*/
 
 app.listen(4000, () => {
     console.log("Escuchando en el puerto 4000");
@@ -56,27 +54,31 @@ app.post('/FormMarkdown', (request, response) => {
     fs.appendFile('pub/prueba', markdownTexto, function(err) {
         if (err) throw err;
         console.log('Guardado!');
-    });
-    
-    /*
-    var form = require('fs').readFileSync('form.html');
-      //  querystring = require('querystring'),
-       // util = require('util'),
-    var dataString = '';
-    
-    request.on('data', function(data){
-        dataString += data
-    })
-    */
+    });    
+});
 
-    /*  
-    
-    var fs = require('fs');
-    fs.readFile('form.html', function (err, data) {
-        response.writeHead(200, {'Content-Type': 'text/html'});
-        response.write(data);
-        return response.end();
+app.get('/listar', (request, response) => {
+	let objectSend = {};
+	let dirName = "Files";
+	objectSend.dirName = dirName;
+	fs.readdir(dirName, (err, files) => {
+		objectSend.fileArray = files;
+		response.send( objectSend );
+	});
+});
+app.get("/crear", (request, response) => {
+	let jsonContent = request.body;
+	jsonContent.text;
+});
+
+app.post("/mostrar", (request, response) => {
+    let file = request.body.text;
+    console.log(file);
+    fs.readFile("Files/"+file, (err, content) => {
+        content = md.render(content.toString())
+        response.setHeader('Content-Type', 'application/json')
+        response.end(JSON.stringify({
+            text: content
+        }))
     });
-    */    
-    
 });
