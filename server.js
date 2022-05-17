@@ -34,27 +34,32 @@ app.get('/FormMarkdown', (request, response) => {
 
 app.post('/FormMarkdown', (request, response) => {
     console.log(request.body);
-    fs.readFile(path.resolve(__dirname, 'pub/prueba'), 'utf8',
-        (err, data) => {
-            if (err) {
-                console.error(err)
-                response.status(500).json({
-                    error: 'message'
-                })
-                return
-            }
-            response.json({
-                text: data.replace(/\n/g, '<br>')
-            })
-        })
 
-    let markdownTexto = request.body.textoM
-    console.log(markdownTexto)
-    
-    fs.appendFile('pub/prueba', markdownTexto, function(err) {
-        if (err) throw err;
-        console.log('Guardado!');
-    });    
+	let fileName = request.body.tituloM;
+	let fileContent = request.body.textoM;
+	
+	fs.readdir("./Files", (err, files) => {
+		let jsonResponse;
+		if(files.includes(fileName)){
+			jsonResponse = {message: "El archivo ya existe."};
+			response.json(jsonResponse);
+		} else {
+
+			fs.writeFile('Files/' + fileName, fileContent, function (err) {
+				if (err){
+					jsonResponse = {message: "Se presento un error inesperado en el servidor."};
+					response.json(jsonResponse);
+					throw err;
+				} else {
+					jsonResponse = {message: "El archivo fue creado con exito"};
+					response.json(jsonResponse);
+					console.log('Saved!');
+				}
+			});
+
+		}
+	});
+
 });
 
 app.get('/listar', (request, response) => {

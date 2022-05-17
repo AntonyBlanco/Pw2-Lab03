@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateFileList(){
+	document.querySelector("#Texto").setAttribute("style","display: none");
+	document.querySelector("#divCrear").setAttribute("style","display: none");
+	document.querySelector("#listaArchivos").setAttribute("style","display: block");
+	document.querySelector("title").innerHTML = "Markdown Wiki";
+	document.querySelector("#tituloPagina").innerHTML = "Markdown Wiki";
+	document.querySelector("#volverActualizar").innerHTML = "Actualizar";
+
+
 	let listDiv = document.querySelector("#listaArchivos");
 	let inner = "<ul>\n";
 	let jsonResponse;
@@ -49,5 +57,17 @@ function mostrar(file){
 			//text = text.replaceAll(/\n/g, "<br>");
 			document.querySelector("#Texto").innerHTML = text;
 		}
-	)
+	).then(
+		function(){
+			document.querySelector("#listaArchivos").setAttribute("style","display: none");
+			document.querySelector("#Texto").setAttribute("style","display: block");
+			document.querySelector("title").innerHTML = file;
+			document.querySelector("#tituloPagina").innerHTML = file;
+			document.querySelector("#volverActualizar").innerHTML = "Volver";
+		}
+	);
+}
+
+function mostrarFormulario(){
+	document.querySelector("#divCrear").setAttribute("style","display: block");
 }

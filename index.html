@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Lista de archivos</title>
+		<title>Markdown Wiki</title>
 		<meta charset="UTF-8">
 		<script src="./JavaScript.js"></script>
+		<link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/3507/PNG/512/tomato_vegetables_vegetable_food_agriculture_fruit_icon_220780.png">
 	</head>
 	<body>
-		<h1>Hola</h1>
+		<h1 id="tituloPagina">Markdown Wiki</h1>
 		<div id="listaArchivos">
 		</div>
+		<button onclick="mostrarFormulario()">Crear nuevo archivo</button>
+		<button id="volverActualizar" onclick="updateFileList()">Volver</button>
         <div id="Texto"> </div>
+		<div id="divCrear" style="display: none">
+			<form action="/FormMarkdown" method="post">
+				<label> Titulo del archivo: </label><br>
+				<input type="text" name="tituloM"><br>
+				<label for="textoM">Inserte texto:</label><br>
+				<textarea id="textoM" name="textoM" style="width:200px; height:200px"></textarea>
+				<br><br>
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
 	</body>
 </html>
