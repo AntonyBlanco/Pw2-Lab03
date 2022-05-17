@@ -37,7 +37,7 @@
         <td>NÚMERO DE PRÁCTICA:</td><td>03</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
     </tr>
     <tr>
-        <td colspan="2">FECHA DE PRESENTACIÓN:</td><td>14-May-2022</td><td colspan="2">HORA DE PRESENTACIÓN:</td><td>20:00</td>
+        <td colspan="2">FECHA DE PRESENTACIÓN:</td><td>16-May-2022</td><td colspan="2">HORA DE PRESENTACIÓN:</td><td>23:55</td>
     </tr>
     <tr>
         <td colspan="3">INTEGRANTES:
@@ -86,11 +86,23 @@
             <td>
             II. SOLUCIÓN DEL CUESTIONARIO<br>
             <ul>
-                <li><b>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?</b></li>
+                <li>
+                    <b>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?</b><br>
+                    “método realiza muchas tareas útiles para respuestas simples que no son de transmisión: por ejemplo, asigna automáticamente el campo de encabezado de respuesta HTTP Content-Length (a menos que se haya definido previamente) y proporciona soporte automático de actualización de caché HEAD y HTTP.”. Extraído de la pagina oficial de Express en el módulo de: res.send()
+                </li>
                 jnjnjn
-                <li><b>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</b></li>
-                <li><b>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</b></li>
-                <li><b>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</b></li>
+                <li>
+                    <b>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</b><br>
+                    Dentro de la carpeta estática que se definió en la línea “app.use(express.static('pub'))”, en este caso es la carpeta “./pub” en referencia de la ubicación actual del archivo del servidor.
+                </li>
+                <li>
+                    <b>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</b><br>
+                    Reemplaza los saltos de línea(/n)  por <br> para hacer saltos en html lo cual ayuda a que se vea mejor el poema al renderizarse en el DOM.
+                </li>
+                <li>
+                    <b>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</b><br>
+                    La comunicación entre el cliente y el servidor es de strings principalmente, por lo tanto en vez de enviar un json podríamos enviar una texto directamente, pero esto no facilita la comunicación entre cliente y servidor porque la información no está organizada
+                </li>
             </ul>
             </td>
         </tr>
@@ -98,9 +110,9 @@
             <td>
             III. CONCLUSIONES<br>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Saber manejar y controlar los objetos de tipo JSON son de mucha importancia ya que a la hora de recibir la información la recibimos en forma de cadena, pero para manejar dicha información debemos pasarla a formato JSON, y si no conocemos la forma de manejar el json pues tampoco manejaremos adecuadamente la respuesta .</li>
+                    <li>Se puede utilizar javascript en varios aspectos, desde su creación que se utilizaba para el front end y con la ayuda de node y express se puede crear un servidor y trabajar con javascript en el backend.</li>
+                    <li>El uso de ajax es una ventaja para comunicarse con el servidor, y podemos tomar ventaja de ello en una gran mayoría de servidores que utilizan http y por lo tanto los métodos post y get.</li>
                 </ul>
             </td>
         </tr>
@@ -130,8 +142,15 @@
     <tbody>
         <tr>
             <td>
-                [1] Escobedo, R., 2022. pw2/labs/lab01 at main · rescobedoq/pw2. [online] GitHub. Available at: https://github.com/rescobedoq/pw2/tree/main/labs/lab01.<br>
-                [2] Proyectos de tecnología con arduino, 2022. Manejo de ramas de Git, en vs code . (branch). [video] Available at: https://www.youtube.com/watch?v=k8UlMFtNDpE.
+                <ul>
+                    <li><a href="https://www.w3schools.com/nodejs/nodejs_intro.asp">https://www.w3schools.com/nodejs/nodejs_intro.asp</a></li>
+                    <li><a href="https://nodejs.org/en/docs/guides/getting-started-guide/">https://nodejs.org/en/docs/guides/getting-started-guide/</a></li>
+                    <li><a href="https://nodejs.dev/learn">https://nodejs.dev/learn</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_api_fetch.asp">https://www.w3schools.com/js/js_api_fetch.asp</a></li>
+                    <li><a href="https://expressjs.com/es/">https://expressjs.com/es/</a></li>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch</a></li>
+                    <li><a href="https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction">https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction</a></li>
+                </ul>
             </td>
         </tr>
     </tbody>
