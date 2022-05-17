@@ -33,7 +33,7 @@ function updateFileList(){
 }
 
 function mostrar(file){
-	const url = 'http://localhost:4000/mostrar';
+	const url = '/mostrar';
 
 	const data = {
 		text: file
